@@ -10,3 +10,4 @@
 
 -Create student grade calculator
 -Create word frequency count
+-Create Palindrome check
