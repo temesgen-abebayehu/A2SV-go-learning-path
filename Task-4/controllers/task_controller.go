@@ -23,20 +23,12 @@ func (tc *TaskController) CreateTask(c *gin.Context) {
 		return
 	}
 
-	createdTask, err := tc.service.CreateTask(task)
-	if err != nil {
-		c.JSON(http.StatusInternalServerError, gin.H{"error": err.Error()})
-		return
-	}
+	createdTask := tc.service.CreateTask(task)
 	c.JSON(http.StatusCreated, createdTask)
 }
 
 func (tc *TaskController) GetAllTasks(c *gin.Context) {
-	tasks, err := tc.service.GetAllTasks()
-	if err != nil {
-		c.JSON(http.StatusInternalServerError, gin.H{"error": err.Error()})
-		return
-	}
+	tasks := tc.service.GetAllTasks()
 	c.JSON(http.StatusOK, tasks)
 }
 
