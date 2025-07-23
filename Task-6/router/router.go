@@ -3,9 +3,6 @@ package router
 import (
 	"task_manager/controllers"
 	"task_manager/data"
-	// "task_manager/middleware"
-	// "task_manager/models"
-
 	"github.com/gin-gonic/gin"
 )
 
